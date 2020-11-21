@@ -1,6 +1,6 @@
 ################################# Default configuration ###################
 baseURL = "/"
-title = "Airspace | Creative Agency Hugo Template"
+title = "二木软件"
 theme = "airspace-hugo"
 # post pagination
 paginate = "4"
@@ -85,14 +85,14 @@ sidebar = ["recent_posts", "taxonomy_category", "taxonomy_tags"]
 #################### default parameters ################################
 [params]
 logo = "images/logo.png"
-logo_width = "150px"
+logo_width = "120px"
 # Meta data
-description = "This is meta description"
-author = "Themefisher"
+description = ""
+author = "Ermu"
 # Contact Information
-mobile = "0124857985320"
-email = "demo@email.com"
-location = "North Main Street,Brooklyn Australia"
+phone = "18671744221"
+email = "ermu@2mui.com"
+location = "武汉市东湖新技术开发区武大科技园豪迈大厦1栋106"
 # contact form action
 contact_form_action = "#" # contact form works with : https://formspree.io
 # Google Analitycs
@@ -157,173 +157,66 @@ languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
 # copyright
-copyright = "Copyright &copy; 2020 [Themefisher](https://themefisher.com) All Rights Reserved"
+copyright = "Copyright &copy; 2020 [二木设计](https://www.2mui.com) All Rights Reserved"
 
 
 ######################### english navigation #############################
 # main menu
 [[Languages.en.menu.main]]
-name = "Home"
+name = "主页"
 URL = "/"
 weight = 1
 
 [[Languages.en.menu.main]]
-name = "About"
+name = "关于"
 URL = "about"
 weight = 2
 
 [[Languages.en.menu.main]]
-name = "Project"
+name = "案例"
 URL = "project"
 weight = 3
 
 [[Languages.en.menu.main]]
-name = "Blog"
+name = "资讯"
 URL = "blog"
 weight = 4
 
 [[Languages.en.menu.main]]
+name = "服务"
+URL = "service"
 weight = 5
-name = "Pages"
-hasChildren = true
-
-  [[Languages.en.menu.main]]
-  parent = "Pages"
-  name = "FAQ"
-  URL = "faq"
-
-  [[Languages.en.menu.main]]
-  parent = "Pages"
-  name = "Pricing"
-  URL = "pricing"
-
-  [[Languages.en.menu.main]]
-  parent = "Pages"
-  name = "Service"
-  URL = "service"
   
 [[Languages.en.menu.main]]
-name = "Contact"
+name = "联系我们"
 URL = "contact"
 weight = 6
 
 
 # footer menu
 [[Languages.en.menu.footer]]
-name = "About"
+name = "关于"
 URL = "about"
 weight = 1
 
 [[Languages.en.menu.footer]]
-name = "Project"
+name = "案例"
 URL = "project"
 weight = 2
 
 [[Languages.en.menu.footer]]
-name = "Service"
+name = "服务"
 URL = "service"
 weight = 3
 
-[[Languages.en.menu.footer]]
-name = "Pricing"
-URL = "pricing"
-weight = 4
 
 [[Languages.en.menu.footer]]
-name = "FAQ"
-URL = "faq"
-weight = 5
-
-[[Languages.en.menu.footer]]
-name = "Contact"
-URL = "contact"
-weight = 6
-
-################################ France Language ########################
-[Languages.fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
-weight = 2
-# copyright
-copyright = "Copyright &copy; 2020 [Themefisher](https://themefisher.com) All Rights Reserved"
-
-
-######################### france navigation #############################
-# main menu
-[[Languages.fr.menu.main]]
-name = "Accueil"
-URL = "/"
-weight = 1
-
-[[Languages.fr.menu.main]]
-name = "À propos"
-URL = "about"
-weight = 2
-
-[[Languages.fr.menu.main]]
-name = "Projet"
-URL = "project"
-weight = 3
-
-[[Languages.fr.menu.main]]
-name = "Blog"
+name = "资讯"
 URL = "blog"
 weight = 4
 
-[[Languages.fr.menu.main]]
-weight = 5
-name = "Pages"
-hasChildren = true
-
-  [[Languages.fr.menu.main]]
-  parent = "Pages"
-  name = "FAQ"
-  URL = "faq"
-
-  [[Languages.fr.menu.main]]
-  parent = "Pages"
-  name = "Tarification"
-  URL = "pricing"
-
-  [[Languages.fr.menu.main]]
-  parent = "Pages"
-  name = "Un service"
-  URL = "service"
-  
-[[Languages.fr.menu.main]]
-name = "Contact"
+[[Languages.en.menu.footer]]
+name = "联系我们"
 URL = "contact"
-weight = 6
-
-
-# footer menu
-[[Languages.fr.menu.footer]]
-name = "About"
-URL = "about"
-weight = 1
-
-[[Languages.fr.menu.footer]]
-name = "Project"
-URL = "project"
-weight = 2
-
-[[Languages.fr.menu.footer]]
-name = "Service"
-URL = "service"
-weight = 3
-
-[[Languages.fr.menu.footer]]
-name = "Pricing"
-URL = "pricing"
-weight = 4
-
-[[Languages.fr.menu.footer]]
-name = "FAQ"
-URL = "faq"
 weight = 5
 
-[[Languages.fr.menu.footer]]
-name = "Contact"
-URL = "contact"
-weight = 6
