@@ -1,102 +1,330 @@
-title = "Airspace for Hugo"
-baseURL = "/"
-languageCode = "en-us"
+################################# Default configuration ###################
+baseURL = "http://examplesite.org"
+title = "Airspace | Creative Agency Hugo Template"
 theme = "airspace-hugo"
+themesDir = "../.."
+# post pagination
+paginate = "4"
+# post excerpt
+summaryLength = "30"
+# disqus short name
+disqusShortname = "" # get your shortname form here : https://disqus.com
+# disable language
+disableLanguages = []
 
-[menu]
+################################# Outputs #################################
+# hugo outputs
+[outputs]
+home = ["HTML"]
 
-  [[menu.header]]
-    weight = 2
-    name = "Work"
-    url = "/work"
-  [[menu.header]]
-    weight = 3
-    name = "Blog"
-    url = "/blog"
-  [[menu.header]]
-    weight = 4
-    name = "Service"
-    url = "#"
-  [[menu.header]]
-    weight = 5
-    name = "Contact"
-    url = "/contact"
+# render unsafe html
+[markup.goldmark.renderer]
+unsafe = true
 
-  [[menu.footer]]
-    weight = 1
-    name = "About us"
-    url = "#"
-  [[menu.footer]]
-    weight = 2
-    name = "Contact us"
-    url = "#"
-  [[menu.footer]]
-    weight = 3
-    name = "How it works"
-    url = "#"
-  [[menu.footer]]
-    weight = 4
-    name = "Blog"
-    url = "#"
-  [[menu.footer]]
-    weight = 5
-    name = "Terms"
-    url = "#"
 
-# The site's parameters
+#################################### Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+page = "/"
+attributes = "media='screen'"
+
+[[params.plugins.css]]
+link = "plugins/Ionicons/css/ionicons.min.css"
+page = "/"
+attributes = ""
+
+[[params.plugins.css]]
+link = "plugins/magnific-popup/magnific-popup.min.css"
+page = "/"
+attributes = ""
+
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+page = "/"
+attributes = ""
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jQuery/jquery.min.js"
+page = "/"
+attributes = ""
+
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+page = "/"
+attributes = ""
+
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+page = "/"
+attributes = ""
+
+[[params.plugins.js]]
+link = "plugins/magnific-popup/magnific-popup.min.js"
+page = "/"
+attributes = ""
+
+[[params.plugins.js]]
+link = "plugins/shuffle/shuffle.min.js"
+page = "/"
+attributes = ""
+
+[[params.plugins.js]]
+link = "plugins/google-map/gmap.js"
+page = "contact/"
+attributes = ""
+
+
+############################### widgets #################################
+
+[params.widgets]
+sidebar = ["recent_posts", "taxonomy_category", "taxonomy_tags"]
+
+
+#################### default parameters ################################
 [params]
+logo = "images/logo.png"
+logo_width = "150px"
+# Meta data
+description = "This is meta description"
+author = "Themefisher"
+# Contact Information
+mobile = "0124857985320"
+email = "demo@email.com"
+location = "North Main Street,Brooklyn Australia"
+# contact form action
+contact_form_action = "#" # contact form works with : https://formspree.io
+# Google Analitycs
+google_analitycs_id = "" # Your ID# search
+# multi-author support (if set to true, you must use an Array in the author field)
+multi_author = false
 
-  # If you want to remove the copyright text you need a Themefisher license.
-  # This license is offered with a 50% discount for all Hugo users.
-  # For information see https://github.com/gohugoio/hugoThemes/issues/260
+# Preloader
+[params.preloader]
+enable = true
+preloader = "" # use .png , .svg or .gif format
 
-  date_format = "6 January 2006"
+# Navigation get start button
+[params.nav_button]
+enable = true
+label = "Get A Quote"
+link = "contact"
 
-  home = "Home"
+# google map
+[params.gmap]
+enable = true
+gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"
+map_latitude = "51.5223477"
+map_longitude = "-0.1622023"
+map_marker = "images/marker.png"
 
-  [params.slider]
-    enable = true
-    title = "A digital marketing &amp; design agency"
-    subtitle = "We love the Web and the work we do.<br/>We work closely with our clients to deliver the best possible solutions for their needs"
+# cookies
+[params.cookies]
+enable = true
+expire_days = 2
+  
+############################# social site ########################
+[[params.social]]
+icon = "ion-social-googleplus-outline" #ionicon pack v2 : https://ionicons.com/v2/
+link = "#"
 
-  [params.wrapper]
-    enable = true
-    title = "About Us"
-    italic = "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"
-    paragraph = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id"
+[[params.social]]
+icon = "ion-social-linkedin-outline" #ionicon pack v2 : https://ionicons.com/v2/
+link = "#"
 
-  [params.blog]
-    enable = true
-    title = "Get The Latest On What We're doing"
-    subtitle = "Catch up with us, anytime and anywhere"
+[[params.social]]
+icon = "ion-social-pinterest-outline" #ionicon pack v2 : https://ionicons.com/v2/
+link = "#"
 
-  [params.feature]
-    enable = true
-    title = "We believe in great ideas"
-    content = "Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
-    [params.feature.button]
-      caption = "View Works"
-      url = "#"
+[[params.social]]
+icon = "ion-social-dribbble-outline" #ionicon pack v2 : https://ionicons.com/v2/
+link = "#"
 
-  [params.call]
-    enable = true
-    title = "We design delightful digital experiences."
-    paragraph = "Read more about what we do and our philosophy of design. Judge for yourself The work and results we’ve achieved for other clients, and meet our highly experienced Team who just love to design."
+[[params.social]]
+icon = "ion-social-twitter-outline" #ionicon pack v2 : https://ionicons.com/v2/
+link = "#"
 
-  [params.contact]
-    enable = true
-    title = "Drop us a note"
-    subtitle = "Don’t just take our word for it. Check out some of our latest work."
-    [params.contact.form]
-      name = "Your name"
-      email = "Your email"
-      subject = "Your subject"
-      message = "Your message"
-      button = "Send message"
-    [params.contact.box]
-      title = "Stop by for a visit"
-      address = "North Main Street, Brooklyn Australia"
-      email = "Email: contact@mail.com"
-      phone = "Phone: +88 01672 506 744"
-    [params.contact.gmaps]
-      title = "We Also Count in Google Maps"
+[[params.social]]
+icon = "ion-social-facebook-outline" #ionicon pack v2 : https://ionicons.com/v2/
+link = "#"
+
+
+################################ English Language ########################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+# copyright
+copyright = "Copyright &copy; 2020 [Themefisher](https://themefisher.com) All Rights Reserved"
+
+
+######################### english navigation #############################
+# main menu
+[[Languages.en.menu.main]]
+name = "Home"
+URL = "/"
+weight = 1
+
+[[Languages.en.menu.main]]
+name = "About"
+URL = "about"
+weight = 2
+
+[[Languages.en.menu.main]]
+name = "Project"
+URL = "project"
+weight = 3
+
+[[Languages.en.menu.main]]
+name = "Blog"
+URL = "blog"
+weight = 4
+
+[[Languages.en.menu.main]]
+weight = 5
+name = "Pages"
+hasChildren = true
+
+  [[Languages.en.menu.main]]
+  parent = "Pages"
+  name = "FAQ"
+  URL = "faq"
+
+  [[Languages.en.menu.main]]
+  parent = "Pages"
+  name = "Pricing"
+  URL = "pricing"
+
+  [[Languages.en.menu.main]]
+  parent = "Pages"
+  name = "Service"
+  URL = "service"
+  
+[[Languages.en.menu.main]]
+name = "Contact"
+URL = "contact"
+weight = 6
+
+
+# footer menu
+[[Languages.en.menu.footer]]
+name = "About"
+URL = "about"
+weight = 1
+
+[[Languages.en.menu.footer]]
+name = "Project"
+URL = "project"
+weight = 2
+
+[[Languages.en.menu.footer]]
+name = "Service"
+URL = "service"
+weight = 3
+
+[[Languages.en.menu.footer]]
+name = "Pricing"
+URL = "pricing"
+weight = 4
+
+[[Languages.en.menu.footer]]
+name = "FAQ"
+URL = "faq"
+weight = 5
+
+[[Languages.en.menu.footer]]
+name = "Contact"
+URL = "contact"
+weight = 6
+
+################################ France Language ########################
+[Languages.fr]
+languageName = "Fr"
+languageCode = "fr-fr"
+contentDir = "content/french"
+weight = 2
+# copyright
+copyright = "Copyright &copy; 2020 [Themefisher](https://themefisher.com) All Rights Reserved"
+
+
+######################### france navigation #############################
+# main menu
+[[Languages.fr.menu.main]]
+name = "Accueil"
+URL = "/"
+weight = 1
+
+[[Languages.fr.menu.main]]
+name = "À propos"
+URL = "about"
+weight = 2
+
+[[Languages.fr.menu.main]]
+name = "Projet"
+URL = "project"
+weight = 3
+
+[[Languages.fr.menu.main]]
+name = "Blog"
+URL = "blog"
+weight = 4
+
+[[Languages.fr.menu.main]]
+weight = 5
+name = "Pages"
+hasChildren = true
+
+  [[Languages.fr.menu.main]]
+  parent = "Pages"
+  name = "FAQ"
+  URL = "faq"
+
+  [[Languages.fr.menu.main]]
+  parent = "Pages"
+  name = "Tarification"
+  URL = "pricing"
+
+  [[Languages.fr.menu.main]]
+  parent = "Pages"
+  name = "Un service"
+  URL = "service"
+  
+[[Languages.fr.menu.main]]
+name = "Contact"
+URL = "contact"
+weight = 6
+
+
+# footer menu
+[[Languages.fr.menu.footer]]
+name = "About"
+URL = "about"
+weight = 1
+
+[[Languages.fr.menu.footer]]
+name = "Project"
+URL = "project"
+weight = 2
+
+[[Languages.fr.menu.footer]]
+name = "Service"
+URL = "service"
+weight = 3
+
+[[Languages.fr.menu.footer]]
+name = "Pricing"
+URL = "pricing"
+weight = 4
+
+[[Languages.fr.menu.footer]]
+name = "FAQ"
+URL = "faq"
+weight = 5
+
+[[Languages.fr.menu.footer]]
+name = "Contact"
+URL = "contact"
+weight = 6
