@@ -178,15 +178,15 @@ URL = "project"
 weight = 3
 
 [[Languages.en.menu.main]]
-name = "资讯"
-URL = "blog"
-weight = 4
-
-[[Languages.en.menu.main]]
 name = "服务"
 URL = "service"
-weight = 5
+weight = 4
   
+[[Languages.en.menu.main]]
+name = "资讯"
+URL = "blog"
+weight = 5
+
 [[Languages.en.menu.main]]
 name = "联系我们"
 URL = "contact"
